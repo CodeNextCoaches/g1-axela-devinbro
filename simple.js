@@ -1,8 +1,8 @@
 (function () {
 
-  var input,
-      submit,
-      message,
+  var input = document.querySelector('#iris-input'),
+      submit, = document.querySelector('#iris-submit'),
+      message, = document.querySelector('#iris-message'),
       validInputs = [
         "Where do you live?",
         "What are you?",
