@@ -3,7 +3,7 @@
   var input = document.querySelector("#axela-input"),
       submit = document.querySelector("#axela-submit"),
       message = document.querySelector("#axela-message"),
-      advancedDiv,= document.querySelector("#axela-advancedDiv"),
+      advancedDiv = document.querySelector("#axela-advancedDiv"),
       errorText = "I don't understand you.",
       dunnoText = "I wasn't programmed to know that.",
       picture = null,
@@ -55,14 +55,45 @@
      input.Value = '';
      if (words.lentgh() == 1) {
        if(greetings.indexOf (words[0]) > -1){
-         message.innerHTML = 'Greetings!';
+         message.innerHTML = 'Sup_fam';
        }else{
          message.innerHTML = errorText;
        }
 
+     }else if (words.lentgh == 2) {
+       switch(words[0]) {
+         case "who":
+         who(words[1]);
+         break;
+
+           case "what":
+           who(words[1]);
+           break;
+
+
+             case "where":
+             who(words[1]);
+             break;
+
+             case "tell":
+             who(words[1]);
+             break;
+
+             case "show":
+             who(words[1]);
+             break;
+             default:
+             message.innerHTML = errorText;
+
        }
+     }else{
+       message.innerHTML = errorText;
      }
-   }
+
+
+     }
+     }
+
 
   /*
    * who(word)
@@ -78,6 +109,22 @@
      dunnoText, NOT errorText (since it's not an error per se, Axela just
      doesn't know what they're referring to.)
    */
+
+   function who(word) {
+     switch (word) {
+       case "you" :
+       message.innerHTML = 'I am Axela, of course';
+       break;
+       case "me" :
+       message.innerHTML = 'you are you';
+       break;
+       case "cool" :
+       message.innerHTML = 'Devin';
+      break;
+      default;
+
+     }
+   }
 
   /*
    * what(word)
@@ -98,6 +145,8 @@
    * show(word)
    * See above.
    */
-
-
+function doubleUp(num) {
+  console.log(num*2);
+}
+doubleUp(4);
 })();
