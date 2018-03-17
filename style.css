@@ -5,8 +5,8 @@ body {
 
 body div {
   text-align: center;
-  width: 75%;
-  border: 1px solid black;
+  width: 50%;
+  border: 1px solid red;
   margin: 0 auto;
-  padding: 10px;
+  padding: 100px;
 }

@@ -3,7 +3,7 @@
   var input = document.querySelector("#axela-input"),
       submit = document.querySelector("#axela-submit"),
       message = document.querySelector("#axela-message"),
-      advancedDiv = document.querySelector("#axela-advancedDiv"),
+      advancedDiv = document.querySelector("#advancedDiv"),
       errorText = "I don't understand you.",
       dunnoText = "I wasn't programmed to know that.",
       picture = null,
@@ -16,10 +16,15 @@
   // This function checks if the user has pressed "ENTER" on their keyboard.
   function checkKey(event) {
     var keyCode = event.which || event.keyCode;
-    if(keyCode == "13") {
+    if(keyCode == "13"){
       processInput();
     }
   }
+
+
+
+
+
 
   /*
    * processInput()
@@ -50,17 +55,17 @@
    function processInput(){
      if (advancedDiv.contains(picture)){
        picture.removeChild();
-     }  n
+     }
      var words= input.value.toLowerCase().trim().split(" ");
-     input.Value = '';
-     if (words.lentgh() == 1) {
+     input.value = '';
+     if (words.length == 1) {
        if(greetings.indexOf (words[0]) > -1){
          message.innerHTML = 'Sup_fam';
        }else{
          message.innerHTML = errorText;
        }
 
-     }else if (words.lentgh == 2) {
+     }else if (words.length == 2) {
        switch(words[0]) {
          case "who":
          who(words[1]);
@@ -92,7 +97,7 @@
 
 
      }
-     }
+
 
 
   /*
@@ -110,31 +115,29 @@
      doesn't know what they're referring to.)
    */
 
-   function who(word) {
-     switch (word) {
-       case "you" :
+   function who(words) {
+     switch (words) {
+       case 'you' :
        message.innerHTML = 'I am Axela, of course';
        break;
-       case "me" :
+       case 'me' :
        message.innerHTML = 'you are you';
        break;
-       case "cool" :
+       case 'who_is_sk8_god' :
        message.innerHTML = 'Devin';
       break;
-      default;
+      default:
+      message.innerHTML = dunnoText;
 
      }
    }
 
-  /*
-   * what(word)
-   * See above.
-   */
 
-  /*
-   * where(word)
-   * See above.
-   */
+
+
+
+
+
 
   /*
    * tell(word)
@@ -145,8 +148,25 @@
    * show(word)
    * See above.
    */
-function doubleUp(num) {
-  console.log(num*2);
+
+
+function show(word) {
+  switch(word){
+  case 'sk8' :
+  message.innerHTML = 'here is a sk8r boi';
+  picture = document.createElement('img');
+  picture.src = 'img/sk8.jpeg';
+  advancedDiv.appendChild(picture);
+  break;
+  default:
+  message.innerHTML = dunnoText;
+
 }
-doubleUp(4);
-})();
+}
+
+
+
+
+
+
+ })();
