@@ -118,7 +118,7 @@
    function who(words) {
      switch (words) {
        case 'you' :
-       message.innerHTML = 'I am Axela, of course';
+       message.innerHTML = 'I am FUEGO,master of destruction';
        break;
        case 'me' :
        message.innerHTML = 'you are you';

@@ -1,12 +1,22 @@
 body {
   display: flex;
   flex-direction: row;
+background-image: url("img/yo3.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+font-family: 'Nanum Pen Script', cursive;
+color: red ;
+font-size: 20px;
+
 }
+
+
 
 body div {
   text-align: center;
+
   width: 50%;
-  border: 1px solid red;
+
   margin: 0 auto;
-  padding: 100px;
+  padding: 10px;
 }
